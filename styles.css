@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 /*////////////////////////
     Table of Contents
     1. Global Styles
@@ -20,7 +22,27 @@
     box-sizing: border-box;
 }
 
+:root  {
+    --paars-kleur: #5722CD;
+    --blauw-kleur: #4845E4;
+    --roze-kleur: #ED4385;
+    --standaard-tekst: #0C0C0C;
+    --achtergrond-woorden: #F2F0FF;
+    --achtergrond-project: #F3F6F9;
+    --achtergrond-service:#7A7A7A;
+}
+
 /* ------------------------------- 2. Typography ----------------------------------- */
+
+* {
+font-family: roboto, sans-serif, Arial;
+}
+
+* h1,h2,h3,h4,h5,h6 {
+    font-family: merriweather, sans-serif, Arial;
+}
+
+
 
 /* ------------------------------- 3. Layout --------------------------------------- */
 
