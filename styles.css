@@ -17,9 +17,10 @@
 
 /* ------------------------------- 1. Global Styles -------------------------------- */
 
-* {
+*, button {
     margin: 0;
     padding: 0;
+    border: none;
     box-sizing: border-box;
 }
 
@@ -70,7 +71,7 @@ body h1, h2, h3, h4, h5, h6 {
 
 /* --------------- 4.1 Header ------------------------- */
 header {
-    background-color: var(--blauw-kleur);
+    background: linear-gradient(90deg, rgba(21, 21, 237, 1) 0%, rgba(25, 90, 156, 1) 50%, rgba(6, 24, 115, 1) 100%);
     color: white;
 }
 
@@ -80,7 +81,6 @@ header {
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    border: dotted 1px black;
 }
 
 .header-navigation ul {
@@ -89,19 +89,42 @@ header {
     flex-direction: row;
     flex-basis: 300px;
     justify-content: space-between;
-    border: black 1px dotted;
     margin: 10px 20px 10px 0;
-}
+    }
 
 .header-text {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 25px 50px 100px;
+    gap: 12px;
 }
 
 .header-text h2 {
-    padding: ;
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 20px 130px;
 }
+
+.header-text button {
+    border-radius: 30px;
+    padding: 12px 22px;
+    background-color: var(--roze-kleur);
+    color: white;
+    box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.30);
+    position: relative;
+}
+
+/*.overflow-image-header {*/
+/*    max-height: 75px;*/
+/*    position: absolute;*/
+/*    !*top: 265px;*!*/
+/*    !*left: -20px;*!*/
+/*}*/
+
+/*.overflow-image-header+img {*/
+/*    max-height: 100%;*/
+/*    ;*/
 
 /* --------------- 4.2 Introduction ------------------- */
 
