@@ -34,6 +34,10 @@
     --achtergrond-service: #7A7A7A;
 }
 
+* a {
+    text-decoration: none;
+}
+
 /* ------------------------------- 2. Typography ----------------------------------- */
 
 body {
@@ -44,6 +48,9 @@ body h1, h2, h3, h4, h5, h6 {
     font-family: merriweather, sans-serif, Arial;
 }
 
+.header-text p {
+    font-size: 22px;
+}
 
 /* ------------------------------- 3. Layout --------------------------------------- */
 
@@ -63,6 +70,7 @@ body h1, h2, h3, h4, h5, h6 {
     align-items: center;
     margin: 0 20px;
     border: dotted 2px blue;
+    padding: 30px 0;
 }
 
 /* --------------- 3.2 Other --------------------------- */
@@ -74,6 +82,11 @@ header {
     background: linear-gradient(90deg, rgba(21, 21, 237, 1) 0%, rgba(25, 90, 156, 1) 50%, rgba(6, 24, 115, 1) 100%);
     color: white;
 }
+
+.anchor-tag-navbar {
+    color: white;
+}
+
 
 .header-navigation {
     width: 100%;
@@ -90,7 +103,7 @@ header {
     flex-basis: 300px;
     justify-content: space-between;
     margin: 10px 20px 10px 0;
-    }
+}
 
 .header-text {
     display: flex;
@@ -127,5 +140,109 @@ header {
 /*    ;*/
 
 /* --------------- 4.2 Introduction ------------------- */
+
+.introduction-section p {
+    font-size: 16px;
+    color: var(--blauw-kleur);
+    font-weight: bold;
+}
+
+.introduction-text {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 300px;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+}
+
+.introduction-text p {
+    width: 75%;
+    text-align: center;
+    font-size: 18px;
+}
+
+#introduction-question {
+    color: #0C0C0C;
+    font-size: 12px;
+}
+
+.image-wrapper img {
+    width: 100%;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+}
+
+.image-wrapper {
+    flex-basis: 800px;
+    padding: 50px;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+.rolling-stone, .variety, .worth {
+    flex-direction: row;
+    padding: 10px 0 10px 0;
+    background-color: #E3E8EB;
+}
+
+.variety {
+    flex-direction: row-reverse;
+}
+
+.case-studie-text {
+    flex-basis: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: black dotted 2px;
+    height: 100%;
+    gap: 30px;
+    padding: 0 50px 0 50px;
+}
+
+/* ------------------------------- 4.3 articles ----------------------------------- */
+
+.services-articles img {
+    max-width: 50px;
+    margin: 16px 0;
+}
+
+.services-articles p {
+    padding-top: 20px;
+}
+
+.services-articles {
+    text-align: start;
+    border: 1px var(--blauw-kleur) solid;
+    flex-basis: 300px;
+    padding: 20px 30px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+}
+
+.inner-container-articles {
+    flex-basis: 1200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0 20px;
+    border: dotted 2px blue;
+    padding: 30px 60px;
+    flex-wrap: wrap;
+    row-gap: 16px;
+}
+
+.services-articles h4 {
+    color: var(--blauw-kleur);
+}
+
+/* ------------------------------4.4 footer ---------------------------------------- */
+
+footer {
+    background-color: #0C0C0C;
+    color: #FFFFFF;
+    padding: 12px;
+    font-size: 10px;
+}
+
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
