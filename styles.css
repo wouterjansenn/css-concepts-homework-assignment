@@ -276,7 +276,7 @@ header {
 
 .form-name-email-message input {
     margin-bottom: 1rem;
-    height: 2rem;
+    height: 32px;
 }
 
 .form-name-email-message input:focus {
