@@ -1,31 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 /*////////////////////////
     Table of Contents
     1. Global Styles
     2. Typography
     3. Layout
-        3.1 Reusables
+        3.1 Re-usables
         3.2 Other
     4. Areas
         4.1 Header
         4.2 Introduction
-        etc.
-    5. Media Queries
-////////////////////////*/
+        4.3 Articles
+        4.4 Form
+        4.5 Footer
+/*    5. Media Queries*/
+/*///////////////////////!*/
 
 /* ------------------------------- 1. Global Styles -------------------------------- */
+html {
+    font-size: 16px;
+}
+
+*, button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+:root {
+    --paars-kleur: #5722CD;
+    --blauw-kleur: #4845E4;
+    --roze-kleur: #ED4385;
+    --standaard-tekst: #0C0C0C;
+    --achtergrond-woorden: #F2F0FF;
+    --achtergrond-project: #F3F6F9;
+    --achtergrond-service: #7A7A7A;
+    --verlopende-kleur: linear-gradient(90deg, rgba(21, 21, 237, 1) 0%, rgba(25, 90, 156, 1) 50%, rgba(6, 24, 115, 1) 100%);
+}
+
+* a {
+    text-decoration: none;
+}
+
+.introduction-text::after {
+    content: 'hello';
+    position: absolute;
+    font-size: 20rem;
+    color: #F2F0FF;
+    z-index: -1;
+    font-weight: bold;
+}
+
 
 /* ------------------------------- 2. Typography ----------------------------------- */
 
+body {
+    font-family: roboto, sans-serif, Arial;
+}
+
+body h1, h2, h3, h4, h5, h6 {
+    font-family: merriweather, sans-serif, Arial;
+}
+
+.header-text p {
+    font-size: 1.25rem;
+}
+
+button {
+    text-transform: uppercase;
+}
+
+.case-studie-text h3 {
+    font-size: 1.75rem;
+}
+
 /* ------------------------------- 3. Layout --------------------------------------- */
 
-/* --------------- 3.1 Reusables ----------------------- */
+/* --------------- 3.1 Re-usables ----------------------- */
+
+.outer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.inner-container {
+    flex-basis: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 .8rem;
+    padding: 2rem 0;
+    position: relative;
+}
 
 /* --------------- 3.2 Other --------------------------- */
 
 /* ------------------------------- 4. Areas ---------------------------------------- */
 
 /* --------------- 4.1 Header ------------------------- */
+header {
+    background: var(--verlopende-kleur);
+    color: white;
+}
+
+.anchor-tag-navbar {
+    color: white;
+}
+
+
+.header-navigation {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header-navigation ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-basis: 19rem;
+    justify-content: space-between;
+    margin: 1rem;
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 3rem 6.5rem;
+    gap: 0.75rem;
+}
+
+.header-text h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 1.25rem 5rem;
+}
+
+.header-text button {
+    border-radius: 30px;
+    padding: 1.25rem;
+    background-color: var(--roze-kleur);
+    color: white;
+    box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.30);
+}
+
+.overflow-image-header {
+    position: absolute;
+    bottom: -1vh;
+}
+
+.overflow-image-header img {
+    width: 4vw;
+    max-width: 75px;
+}
 
 /* --------------- 4.2 Introduction ------------------- */
 
-/* ------------------------------- 5. Media Queries -------------------------------- */
+.introduction-section p {
+    font-size: 1rem;
+    color: var(--blauw-kleur);
+    font-weight: bold;
+}
+
+.introduction-text {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 300px;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.introduction-text p {
+    width: 75%;
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+#introduction-question {
+    color: #0C0C0C;
+    font-size: 1rem;
+}
+
+.image-wrapper img {
+    width: 100%;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+}
+
+.image-wrapper {
+    flex-basis: 800px;
+    padding: 3.5rem;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+.rolling-stone, .worth {
+    flex-direction: row;
+}
+
+.variety {
+    flex-direction: row-reverse;
+}
+
+.gray-background {
+    background-color: #E3E8EB;
+    padding-top: 6.25rem;
+}
+
+.case-studie-text {
+    flex-basis: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    gap: 2rem;
+    padding: 0 3rem;
+}
+
+/* ------------------------------- 4.3 articles ----------------------------------- */
+
+.inner-container-articles {
+    flex-basis: 1200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0 1rem;
+    padding: 2rem 4rem;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+}
+
+.services-articles img {
+    max-width: 50px;
+    margin: 1rem 0;
+}
+
+.services-articles p {
+    padding-top: 1.25rem;
+}
+
+.services-articles {
+    text-align: start;
+    border: 1px var(--blauw-kleur) solid;
+    flex-basis: 300px;
+    padding: 1rem 2rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+}
+
+.services-articles h4 {
+    color: var(--blauw-kleur);
+}
+
+/*-------------------------------- 4.4 Form --------------------------------------------*/
+#contact-us-section {
+    background: var(--verlopende-kleur);
+}
+
+.questions-tile-form {
+    text-align: start;
+    color: #FFFFFF;
+}
+
+.form-name-email-message {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    padding: 2rem;
+}
+
+.form-name-email-message input {
+    margin-bottom: 1rem;
+    height: 32px;
+}
+
+.form-name-email-message input:focus {
+    outline: none;
+}
+
+.form-name-email-message textarea {
+    height: 200px;
+}
+
+.questions-tile-form h3 {
+    font-size: 2.5rem;
+    padding: 1rem;
+}
+
+.questions-tile-form p {
+    font-size: 0.8rem;
+}
+
+.form-name-email-message ::placeholder {
+    padding-left: 0.8rem;
+}
+
+.form-name-email-message button {
+    border-radius: 30px;
+    padding: 1.4rem 4rem;
+    background-color: var(--roze-kleur);
+    color: white;
+    box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.30);
+    align-self: center;
+    margin-top: 1.5rem;
+}
+
+
+/* ------------------------------4.5 footer ---------------------------------------- */
+
+footer {
+    background-color: #0C0C0C;
+    color: #FFFFFF;
+    padding: 12px;
+    font-size: 10px;
+}
+
+/** ------------------------------- 5. Media Queries -------------------------------- *!*!*/
